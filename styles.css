@@ -21,6 +21,7 @@
 
 body {
   background-color: var(--dark-grey);
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
 }
 
 header {
@@ -36,6 +37,19 @@ h1 {
     3rem
   ); /* Minimum: 1.8rem, Scales with 5vw, Maximum: 3rem */
   margin: 25px 0;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+h3 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+p,
+li,
+label,
+span {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .rules-container {
@@ -65,7 +79,7 @@ main {
   align-items: center;
   gap: 1rem;
   margin: auto;
-  width: 90%;
+  width: 60%;
   max-width: 1200px;
   border-radius: 10px;
 }
@@ -126,6 +140,8 @@ input[type="radio"]:disabled + label {
   background-image: linear-gradient(var(--golden-yellow), var(--orange));
   border-color: var(--gold);
   border-width: 3px;
+  padding: 3px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .btn:hover:enabled {
@@ -142,5 +158,10 @@ input[type="radio"]:disabled + label {
   .btn {
     width: 80%;
     justify-self: center;
+  }
+}
+@media (max-width: 170px) {
+  body {
+    word-break: break-word;
   }
 }
